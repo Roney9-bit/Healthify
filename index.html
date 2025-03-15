@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthTech Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login/Signup Page -->
+  <section id="login-page" class="login-page">
+    <div class="login-container">
+      <h1>Welcome to HealthTech</h1>
+      <p>Your partner in health and wellness.</p>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>New user? <a href="#" id="signup-link">Sign up here</a></p>
+    </div>
+
+    <div class="signup-container hidden">
+      <h1>Create an Account</h1>
+      <form id="signup-form">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="new-email" placeholder="Email" required>
+        <input type="password" id="new-password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" id="login-link">Login here</a></p>
+    </div>
+  </section>
+
+  <!-- Dashboard (Hidden by Default) -->
+  <section id="dashboard" class="dashboard hidden">
+    <header>
+      <h1>HealthTech Dashboard</h1>
+      <button id="logout-button">Logout</button>
+    </header>
+
+    <div class="columns">
+      <!-- Chronic Diseases Column -->
+    <!-- Chronic Diseases Column -->
+<div class="column">
+    <h2><i class="fas fa-heartbeat"></i> Chronic Diseases</h2>
+    <div class="disease-cards">
+      <div class="card chronic" onclick="toggleCard(this)">
+        <h3>Diabetes</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> A chronic condition that affects how your body processes blood sugar.</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. John Doe - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Jane Smith - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Hospitals:</strong></p>
+          <ul>
+            <li>City Hospital - <a href="tel:+1112223333">+1 (111) 222-3333</a></li>
+            <li>General Hospital - <a href="tel:+4445556666">+1 (444) 555-6666</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card chronic" onclick="toggleCard(this)">
+        <h3>Hypertension</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> High blood pressure that can lead to serious health issues.</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Emily Brown - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Michael Green - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Hospitals:</strong></p>
+          <ul>
+            <li>Heart Care Center - <a href="tel:+1112223333">+1 (111) 222-3333</a></li>
+            <li>Wellness Clinic - <a href="tel:+4445556666">+1 (444) 555-6666</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card chronic" onclick="toggleCard(this)">
+        <h3>Asthma</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> A condition in which your airways narrow and swell, making breathing difficult.</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Alice White - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Robert Black - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Hospitals:</strong></p>
+          <ul>
+            <li>Lung Care Center - <a href="tel:+1112223333">+1 (111) 222-3333</a></li>
+            <li>City Clinic - <a href="tel:+4445556666">+1 (444) 555-6666</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card chronic" onclick="toggleCard(this)">
+        <h3>Arthritis</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> Inflammation of the joints causing pain and stiffness.</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Laura Blue - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. David Green - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Hospitals:</strong></p>
+          <ul>
+            <li>Ortho Care Center - <a href="tel:+1112223333">+1 (111) 222-3333</a></li>
+            <li>General Hospital - <a href="tel:+4445556666">+1 (444) 555-6666</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card chronic" onclick="toggleCard(this)">
+        <h3>Chronic Kidney Disease</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> A gradual loss of kidney function over time.</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Sarah Lee - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. David White - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Hospitals:</strong></p>
+          <ul>
+            <li>Renal Care Center - <a href="tel:+1112223333">+1 (111) 222-3333</a></li>
+            <li>City Hospital - <a href="tel:+4445556666">+1 (444) 555-6666</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card chronic" onclick="toggleCard(this)">
+        <h3>Chronic Obstructive Pulmonary Disease (COPD)</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> A group of lung diseases that block airflow and make breathing difficult.</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Emily Brown - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Michael Green - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Hospitals:</strong></p>
+          <ul>
+            <li>Lung Care Center - <a href="tel:+1112223333">+1 (111) 222-3333</a></li>
+            <li>Wellness Clinic - <a href="tel:+4445556666">+1 (444) 555-6666</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Non-Chronic Diseases Column -->
+  <div class="column">
+    <h2><i class="fas fa-stethoscope"></i> Non-Chronic Diseases</h2>
+    <div class="disease-cards">
+      <div class="card non-chronic" onclick="toggleCard(this)">
+        <h3>Common Cold</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> A viral infection of the upper respiratory tract.</p>
+          <p><strong>Symptoms:</strong> Runny nose, sore throat, cough</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Sarah Lee - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. David White - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Method of Cure:</strong></p>
+          <ul>
+            <li>Rest and stay hydrated.</li>
+            <li>Use over-the-counter medications like paracetamol for fever.</li>
+            <li>Gargle with warm salt water for a sore throat.</li>
+            <li><strong>Note:</strong> Consult a doctor if symptoms persist for more than a week.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card non-chronic" onclick="toggleCard(this)">
+        <h3>Flu</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> A contagious respiratory illness caused by influenza viruses.</p>
+          <p><strong>Symptoms:</strong> Fever, body aches, fatigue</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Robert Black - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Laura Blue - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Method of Cure:</strong></p>
+          <ul>
+            <li>Rest and drink plenty of fluids.</li>
+            <li>Use antiviral medications if prescribed by a doctor.</li>
+            <li>Take over-the-counter pain relievers for body aches.</li>
+            <li><strong>Note:</strong> Consult a doctor if symptoms worsen or persist.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card non-chronic" onclick="toggleCard(this)">
+        <h3>Migraine</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> A severe headache often accompanied by nausea and sensitivity to light.</p>
+          <p><strong>Symptoms:</strong> Throbbing pain, dizziness, visual disturbances</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Emily Brown - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Michael Green - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Method of Cure:</strong></p>
+          <ul>
+            <li>Rest in a dark, quiet room.</li>
+            <li>Use over-the-counter pain relievers like ibuprofen.</li>
+            <li>Apply a cold compress to the forehead.</li>
+            <li><strong>Note:</strong> Consult a doctor if migraines are frequent or severe.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card non-chronic" onclick="toggleCard(this)">
+        <h3>Gastroenteritis</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> Inflammation of the stomach and intestines, typically due to infection.</p>
+          <p><strong>Symptoms:</strong> Diarrhea, vomiting, abdominal pain</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. John Doe - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Jane Smith - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Method of Cure:</strong></p>
+          <ul>
+            <li>Stay hydrated with oral rehydration solutions.</li>
+            <li>Avoid solid foods until vomiting stops.</li>
+            <li>Gradually reintroduce bland foods like toast and rice.</li>
+            <li><strong>Note:</strong> Consult a doctor if symptoms persist for more than 2 days.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card non-chronic" onclick="toggleCard(this)">
+        <h3>Allergic Rhinitis</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> An allergic response causing sneezing, runny nose, and itchy eyes.</p>
+          <p><strong>Symptoms:</strong> Sneezing, nasal congestion, itchy eyes</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Alice White - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. Robert Black - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Method of Cure:</strong></p>
+          <ul>
+            <li>Use antihistamines to reduce symptoms.</li>
+            <li>Avoid allergens like pollen and dust.</li>
+            <li>Use a saline nasal spray for congestion.</li>
+            <li><strong>Note:</strong> Consult a doctor if symptoms are severe or persistent.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card non-chronic" onclick="toggleCard(this)">
+        <h3>Conjunctivitis (Pink Eye)</h3>
+        <div class="card-content">
+          <p><strong>About:</strong> Inflammation of the conjunctiva, causing redness and itching.</p>
+          <p><strong>Symptoms:</strong> Redness, itching, discharge from the eyes</p>
+          <p><strong>Nearby Doctors:</strong></p>
+          <ul>
+            <li>Dr. Laura Blue - <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Dr. David Green - <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+          </ul>
+          <p><strong>Method of Cure:</strong></p>
+          <ul>
+            <li>Use antibiotic eye drops if prescribed by a doctor.</li>
+            <li>Apply a warm compress to reduce discomfort.</li>
+            <li>Avoid touching or rubbing the eyes.</li>
+            <li><strong>Note:</strong> Consult a doctor if symptoms worsen or persist.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- Daily Activities Column -->
+      <div class="column">
+        <h2>Daily Activities Monitor</h2>
+        <div class="activity-tracker">
+          <div class="tracker-item">
+            <h3>Step Count</h3>
+            <p>Today's Steps: <span id="step-count">0</span></p>
+          </div>
+          <div class="tracker-item">
+            <h3>Heart Rate</h3>
+            <p>Current Heart Rate: <span id="heart-rate">0</span> bpm</p>
+          </div>
+          <div class="tracker-item">
+            <h3>Sleep Cycle</h3>
+            <p>Last Night's Sleep: <span id="sleep-cycle">0</span> hours</p>
+          </div>
+          <div class="tracker-item">
+            <h3>Menstrual Cycle</h3>
+            <p>Next Cycle: <span id="menstrual-cycle">0</span> days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+ <!-- Prescription Upload Section -->
+ <div class="prescription-upload">
+    <div class="upload-card">
+      <h2>Upload Prescription</h2>
+      <p>Drag and drop your prescription file here or click to upload.</p>
+      <form id="upload-form">
+        <label for="prescription-file" class="file-input-label" id="drop-zone">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <span>Choose a file or drag it here</span>
+          <input type="file" id="prescription-file" accept=".pdf,.jpg,.png" required>
+        </label>
+        <div id="file-preview" class="file-preview hidden">
+          <div id="preview-content"></div>
+          <button type="button" id="remove-file" class="remove-file-button">
+            <i class="fas fa-times"></i> Remove
+          </button>
+        </div>
+        <div id="progress-bar" class="progress-bar hidden">
+          <div id="progress"></div>
+        </div>
+        <button type="submit" class="upload-button">
+          <i class="fas fa-paper-plane"></i> Upload
+        </button>
+      </form>
+      <p id="upload-status"></p>
+      <div id="upload-history" class="upload-history hidden">
+        <h3>Upload History</h3>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  

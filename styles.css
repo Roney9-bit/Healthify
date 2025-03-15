@@ -1,0 +1,419 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Login/Signup Page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #fff;
+}
+
+.login-container, .signup-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h1, .signup-container h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.login-container p, .signup-container p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.login-container input, .signup-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-container button, .signup-container button {
+  background: #66a6ff;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover, .signup-container button:hover {
+  background: #4a90e2;
+}
+
+.login-container a, .signup-container a {
+  color: #66a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 2rem;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.dashboard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+#logout-button {
+  background: #dc3545;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+#logout-button:hover {
+  background: #c82333;
+}
+
+/* Columns Layout */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.column {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.column h2 i {
+  margin-right: 0.5rem;
+  color: #66a6ff;
+}
+
+/* Disease Cards */
+.disease-cards .card {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.disease-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.disease-cards .card.chronic {
+  background: #ffebee; /* Soft red for chronic diseases */
+}
+
+.disease-cards .card.non-chronic {
+  background: #e3f2fd; /* Soft blue for non-chronic diseases */
+}
+
+.disease-cards .card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.disease-cards .card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.disease-cards .card-content.show {
+  max-height: 500px; /* Adjust based on content */
+  padding: 1rem 0;
+}
+/* Disease Cards */
+.disease-cards .card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.disease-cards .card-content ul li {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.disease-cards .card-content ul li a {
+  color: #66a6ff;
+  text-decoration: none;
+}
+
+.disease-cards .card-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.disease-cards .card-content strong {
+  color: #333;
+}
+/* Activity Tracker */
+.activity-tracker .tracker-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-tracker .tracker-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activity-tracker .tracker-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.activity-tracker .tracker-item h3 i {
+  margin-right: 0.5rem;
+  color: #66a6ff;
+}
+
+.activity-tracker .tracker-item p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+/* Prescription Upload Section */
+.prescription-upload {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.upload-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.upload-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.upload-card p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.file-input-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e3f2fd;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.file-input-label:hover {
+  background: #bbdefb;
+}
+
+.file-input-label i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #66a6ff;
+}
+
+.file-input-label span {
+  font-size: 1rem;
+  color: #333;
+}
+
+#prescription-file {
+  display: none;
+}
+
+.upload-button {
+  background: #66a6ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.upload-button:hover {
+  background: #4a90e2;
+}
+
+.upload-button i {
+  margin-right: 0.5rem;
+}
+
+#upload-status {
+  margin-top: 1rem;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Drag-and-Drop File Upload */
+#drop-zone {
+  border: 2px dashed #66a6ff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+#drop-zone.dragover {
+  border-color: #4a90e2;
+  background: #e3f2fd;
+}
+
+#drop-zone i {
+  font-size: 2rem;
+  color: #66a6ff;
+  margin-bottom: 0.5rem;
+}
+
+#drop-zone span {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* File Preview */
+.file-preview {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#preview-content img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+}
+
+#preview-content p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.remove-file-button {
+  background: #dc3545;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.remove-file-button:hover {
+  background: #c82333;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  background: #e3f2fd;
+  border-radius: 5px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+#progress {
+  width: 0;
+  height: 10px;
+  background: #66a6ff;
+  transition: width 0.3s ease;
+}
+
+/* Upload History */
+.upload-history {
+  margin-top: 2rem;
+}
+
+.upload-history h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+}
+
+#history-list li {
+  background: #f9f9f9;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#history-list li i {
+  color: #66a6ff;
+  cursor: pointer;
+}
